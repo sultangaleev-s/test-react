@@ -1,0 +1,107 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins.scss' as *;
+
+.page {
+  padding-top: $indent-40;
+  padding-bottom: $indent-80;
+}
+
+.return {
+  grid-column: 1/-1;
+  margin-bottom: $indent-32;
+}
+
+.title {
+  grid-column: 2/12;
+
+  @include screen-small-down {
+    grid-column: 1/-1;
+  }
+}
+
+.imgWrapper {
+  grid-column: 2/6;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border: 1px solid $color-gray;
+  gap: 0;
+
+  @include screen-huge-down {
+    grid-column: 2/7;
+  }
+
+  @include screen-large-down {
+    grid-column: 2/8;
+  }
+
+  @include screen-medium-down {
+    grid-column: 1/8;
+  }
+
+  @include screen-small-down {
+    grid-column: 1/-1;
+    margin-bottom: $indent-24;
+  }
+}
+
+.swiper {
+  height: 100%;
+  width: 100%;
+}
+
+.slide {
+  text-align: center;
+  background-color: rgba($color: $color-gray, $alpha: .3);
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    height: 100%;
+  }
+}
+
+.infoList {
+  grid-column: 7/11;
+  align-self: center;
+
+  @include screen-huge-down {
+    grid-column: 8/12;
+  }
+
+  @include screen-medium-down {
+    grid-column: 8/13;
+  }
+
+  @include screen-small-down {
+    grid-column: 1/-1;
+  }
+}
+
+.listItem {
+  @include typo-big-text;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 4px;
+  border-bottom: 1px solid $color-gray;
+  white-space: nowrap;
+
+  span {
+    color: $color-dark-gray;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: $indent-16;
+  }
+}
+
+.message {
+  @include typo-h2;
+  grid-column: 1/-1;
+  text-align: center;
+  margin: $indent-80 0;
+
+  a {
+    color: $color-main;
+    text-decoration: underline;
+  }
+}

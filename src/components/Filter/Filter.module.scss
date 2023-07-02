@@ -1,0 +1,94 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins.scss' as *;
+
+.filter {
+  grid-column: 1/-1;
+  @include grid;
+  box-shadow: 15px 15px 50px rgba($color: $color-dark, $alpha: .1);
+}
+
+.wrapper {
+  grid-column: 3/11;
+  @include grid;
+  align-items: flex-end;
+  gap: $indent-32;
+  padding: $indent-80;
+
+  @include screen-huge-down {
+    grid-column: 2/12;
+  }
+
+  @include screen-medium-down {
+    grid-column: 1/-1;
+  }
+}
+
+.inputs {
+  display: flex;
+  align-items: center;
+  gap: 0;
+
+  input {
+
+    &:first-child {
+      border-radius: 8px 0 0 8px;
+    }
+
+    &:last-child {
+      border-radius: 0 8px 8px 0;
+    }
+  }
+}
+
+.filterBlock {
+  grid-column: span 3;
+
+  @include screen-medium-down {
+    grid-column: span 4;
+  }
+
+  @include screen-small-down {
+    grid-column: 1/-1;
+  }
+}
+
+.buttonMore {
+  grid-column: span 3;
+
+  @include screen-medium-down {
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  @include screen-small-down {
+    grid-column: span 3;
+    order: 2;
+  }
+}
+
+.buttonsBlock {
+  @include screen-small-down {
+    grid-column: span 3;
+    order: 1;
+  }
+}
+
+.filterForm {
+  margin: auto;
+  grid-column: 3/10;
+  width: 100%;
+  background-color: $color-white;
+  padding: $indent-40 $indent-56;
+  border-radius: 16px;
+
+  @include screen-huge-down {
+    grid-column: 2/12;
+  }
+
+  @include screen-medium-down {
+    grid-column: 1/-1;
+    margin: 0;
+  }
+}

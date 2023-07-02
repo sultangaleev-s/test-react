@@ -1,0 +1,31 @@
+@use "../variables/media.scss" as *;
+
+@mixin screen-small-down {
+  @media (max-width: $container-small-max) {
+    @content;
+  }
+}
+
+@mixin screen-medium-down {
+  @media (max-width: $container-medium-max) {
+    @content;
+  }
+}
+
+@mixin screen-large-down {
+  @media (max-width: $container-large-max) {
+    @content;
+  }
+}
+
+@mixin screen-huge-down {
+  @media (max-width: $container-huge-max) {
+    @content;
+  }
+}
+
+
+
+
+
+

@@ -1,0 +1,23 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins.scss' as *;
+
+.input {
+  @include typo-text;
+  display: block;
+  width: 100%;
+  padding: $indent-8 $indent-16;
+  color: $color-dark;
+  background-color: $color-white;
+  border: 1px solid $color-gray;
+  border-radius: 8px;
+  outline: 0;
+  transition: border-color 0.15s ease-in-out;
+
+  &::placeholder {
+    color: $color-gray;
+  }
+
+  &:hover {
+    border-color: $color-main;
+  }
+}

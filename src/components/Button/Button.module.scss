@@ -1,0 +1,85 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins.scss' as *;
+
+.button {
+  padding: $indent-8 $indent-16;
+  @include typo-big-text;
+  white-space: nowrap;
+  transition: all 0.15s ease-in-out;
+
+  
+
+  &.default {
+    background-color: $color-red;
+    color: $color-white;
+    font-weight: 500;
+    border-radius: 8px;
+
+    &:hover {
+      opacity: .9;
+    }
+  }
+
+  &.filter {
+    font-weight: 600;
+    background-color: $color-white;
+    color: $color-dark;
+    border: 1px solid $color-gray;
+
+    &:hover {
+      color: $color-main;
+      border-color: $color-main;
+    }
+  }
+
+  &.white {
+    background-color: $color-white;
+    color: $color-dark;
+    border: 1px solid $color-dark-gray;
+    border-radius: 8px;
+
+    &:hover {
+      color: $color-main;
+      border-color: $color-main;
+    }
+  }
+
+  &.close {
+    width: 30px;
+    height: 30px;
+    z-index: 15;
+    border-radius: 50%;
+    border: 2px solid $color-dark;
+    
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: calc(50% - 1px);
+      top: 2.5px;
+      background-color: $color-dark;
+      width: 2px;
+      height: 20px;
+      z-index: 16;
+      transition: inherit;
+    }
+
+    &::after {
+      transform: rotate(45deg);
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+    }
+
+    &:hover {
+      border-color: $color-main;
+
+      &::before,
+      &::after {
+        background-color: $color-main;
+      }
+    }
+  }
+}

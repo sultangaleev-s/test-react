@@ -1,0 +1,61 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins.scss' as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $color-gray;
+
+  &:hover {
+    box-shadow: 5px 5px 30px rgba($color: $color-dark, $alpha: .1);
+  }
+}
+
+.imgWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba($color: $color-gray, $alpha: .1);
+  aspect-ratio: 150/120;
+  overflow: hidden;
+
+  img {
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.info {
+  padding: $indent-16;
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: $indent-16;
+
+  strong {
+    @include typo-h1;
+  }
+
+  span {
+    @include typo-h1;
+    font-weight: 400;
+    color: $color-dark-gray;
+  }
+}
+
+.area {
+  @include typo-big-text;
+  display: flex;
+  gap: 0;
+
+  span:not(:last-child) {
+    &::after {
+      content: '|';
+      margin: 0 $indent-8;
+    }
+  }
+}

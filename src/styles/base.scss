@@ -1,0 +1,18 @@
+@use '../styles/mixins.scss' as *;
+@use '../styles/variables.scss' as *;
+@import '~swiper/css';
+@import '~swiper/css/pagination';
+
+body {
+  font-family: Roboto, sans-serif, serif;
+}
+
+.container {
+  padding-left: $indent-64;
+  padding-right: $indent-64;
+  @include grid;
+}
+
+.scroll-block {
+  overflow: hidden;
+}

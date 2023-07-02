@@ -1,0 +1,22 @@
+@use '../../styles/variables.scss' as *;
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 0;
+
+  button {
+    &:first-child {
+      border-radius: 8px 0 0 8px;
+    }
+    
+    &:last-child {
+      border-radius: 0 8px 8px 0;
+    }
+  }
+  
+  .buttonActive {
+    color: $color-main;
+    border-color: $color-main;
+  }
+}

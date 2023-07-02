@@ -1,0 +1,52 @@
+@use '../mixins/media-query.scss' as *;
+
+:root {
+  --indent-8: 8px;
+  --indent-16: 16px;
+  --indent-24: 24px;
+  --indent-32: 32px;
+  --indent-40: 40px;
+  --indent-48: 48px;
+  --indent-56: 56px;
+  --indent-64: 64px;
+  --indent-72: 72px;
+  --indent-80: 80px;
+
+  @include screen-large-down {
+    --indent-8: 6px;
+    --indent-16: 12px;
+    --indent-24: 18px;
+    --indent-32: 24px;
+    --indent-40: 30px;
+    --indent-48: 36px;
+    --indent-56: 42px;
+    --indent-64: 48px;
+    --indent-72: 54px;
+    --indent-80: 60px;
+  }
+
+  @include screen-small-down {
+    --indent-8: 4px;
+  --indent-16: 8px;
+  --indent-24: 12px;
+  --indent-32: 16px;
+  --indent-40: 20px;
+  --indent-48: 24px;
+  --indent-56: 28px;
+  --indent-64: 32px;
+  --indent-72: 26px;
+  --indent-80: 40px;
+  }
+}
+
+
+$indent-8: var(--indent-8);
+$indent-16: var(--indent-16);
+$indent-24: var(--indent-24);
+$indent-32: var(--indent-32);
+$indent-40: var(--indent-40);
+$indent-48: var(--indent-48);
+$indent-56: var(--indent-56);
+$indent-64: var(--indent-64);
+$indent-72: var(--indent-72);
+$indent-80: var(--indent-80);

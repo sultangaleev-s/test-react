@@ -1,0 +1,36 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins.scss' as *;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @include screen-medium-down {
+    justify-content: center;
+  }
+}
+
+.inputs {
+  display: flex;
+}
+
+.filterGroup {
+  @include grid;
+  
+  &:not(:last-child) {
+    margin-bottom: $indent-32;
+  }
+}
+
+.filterBlock {
+  grid-column: span 4;
+
+  @include screen-small-down {
+    grid-column: span 5;
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+}

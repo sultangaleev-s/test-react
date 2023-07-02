@@ -1,0 +1,58 @@
+@use '../../styles/mixins.scss' as *;
+@use '../../styles/variables.scss' as *;
+
+.wrapper {
+  position: relative;
+}
+
+.label {
+  @include typo-text;
+  margin-right: $indent-8;
+}
+
+.head {
+  @include typo-big-text;
+  color: $color-main;
+  padding: $indent-8 $indent-16;
+  border-radius: 8px;
+
+  &:hover {
+    background-color: $color-gray;
+  }
+}
+
+.select {
+  @include typo-big-text;
+  color: $color-dark;
+  border-radius: 8px;
+
+  &.active {
+    color: $color-main;
+  }
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: auto;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: $indent-8;
+  background-color: $color-white;
+  box-shadow: 15px 15px 50px rgba($color: $color-dark, $alpha: .3);
+  z-index: 2;
+}
+
+.select {
+  width: 100%;
+  padding: $indent-8;
+  white-space: nowrap;
+  text-align: left;
+
+  &:hover {
+    background-color: $color-gray;
+  }
+}
